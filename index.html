@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#3C7BB2">
+
+    <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'>
+
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://d12bq4ly3xrtbg.cloudfront.net/assets/apple-touch-icon-57x57-8ade74be1213890e3a1279726d322e09.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://d12bq4ly3xrtbg.cloudfront.net/assets/apple-touch-icon-114x114-a4cefe4e24c8e2651c7097b8de37861a.png" />
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://d12bq4ly3xrtbg.cloudfront.net/assets/apple-touch-icon-72x72-4f35f649b4a26bf2119bb47dd02dbdb9.png" />
@@ -456,6 +459,7 @@ $(function() {
 
 
 
+
 <!--Main Menu Area-->
   <div class="row">
     <div class="col-lg-12 text-center roboto p-tabs">
@@ -469,24 +473,47 @@ $(function() {
 
 
 
+
+
+
 <!--Script for content hiding in basic info and activityFeeds-->
 <script>
   $(document).ready(function(){
     $("#portfolio").click(
       function(){
-        var area=$(this).attr("href");
         $(".basicInfo").hide();
         $(".activityFeeds").hide();
-        $(area).show("slow");
-      })
+        $(".projects").show("slow");
+      });
+      $(".projects").hide();
     });
 </script>
+<!--End of script for content hiding-->
+
+
+
+
+
+
 
 <!--Portfolio Section-->
+<div class="projects" id="portfolio">
+  <div id="filters" class="filters-in-portfolio">
+    <ul class="list-inline">
+      <li><a href="#" datafilter=".projects"><h5>Projects</h5> </a></li>
+      <li><a href="#" datafilter=".certificates"><h5>Cerificates</h5> </a></li>
+      <li><a href="#" datafilter=".achievements"><h5>Achievements</h5> </a></li>
+      <li><a href="#" datafilter=".badges"><h5>Badges</h5> </a></li>
+    </ul>
+  </div>
+</div>
+<!--End of Portfolio section-->
 
 
-<!-- End of Portfolio Section-->
 
+
+<!--style for Portfolio section-->
+<!--End of style for Portfolio-->
 
 
 
