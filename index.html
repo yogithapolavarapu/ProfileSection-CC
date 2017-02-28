@@ -507,31 +507,151 @@ $(function() {
 
 <!--Portfolio Section-->
 <div class="projects" id="portfolio">
+
+  <!--categories-->
   <div id="filters" class="filters-in-portfolio col-lg-12 text-center"></br>
+    <!--Category list-->
     <ul class="list-inline">
       <li><a href="#" datafilter=".projects" id="projectbuttons"><h5>Projects</h5> </a></li>
-      <li><a href="#" datafilter=".certificates" id="projectbuttons"><h5>Cerificates</h5> </a></li>
+      <li><a href="#" datafilter=".certificates" id="projectbuttons"><h5>Certificates</h5> </a></li>
       <li><a href="#" datafilter=".achievements" id="projectbuttons"><h5>Achievements</h5> </a></li>
       <li><a href="#" datafilter=".badges" id="projectbuttons"><h5>Badges</h5> </a></li>
-    </ul>
+    </ul> </br> </br>
+    <!--end of category list-->
   </div>
+
+<!--Projects row-->
+<div class="row">
+  <!-- sample portfolio item1-->
+  <div class="col-md-4 portfolio-item projects">
+    <div class="portfolio-image">
+      <img src="images/tvQuotes.png" alt="tvshow-quotes" />
+    </div>
+    <a href="http://yogithapolavarapu.github.io/workSpace/random_quotes/" target="_blank" class="projectlink" >
+      <div class="project-overlay">
+        <div class="project-info">
+          <h3 class="project-name">TV show quotes</h3>
+          <p class="short desc">Quotes taken from around various TV shows.Share on twitter or have a nice time reading</p>
+        </div>
+      </div>
+    </a>
+  </div>
+  <!-- /end of sample portfolio item1-->
+
+  <!-- sample portfolio item-2-->
+  <div class="col-md-4 portfolio-item projects">
+    <div class="portfolio-image">
+      <img src="images/weatherapp.png" alt="weather-page-image" />
+    </div>
+    <a href="http://yogithapolavarapu.github.io/workSpace/weather-app" target="_blank">
+      <div class="project-overlay">
+        <div class="project-info">
+          <h3 class="project-name">Weather App</h3>
+          <p>Simple page which uses open API and gives the present weather status of a location</p>
+        </div>
+      </div>
+    </a>
+  </div>
+  <!--end of sample portfolio item-2-->
+
+</div>
 </div>
 <!--End of Portfolio section-->
 
-
-
-
-<!--style for Portfolio section-->
 <style>
-#projectbuttons {
+.portfolio-item {
+    margin-bottom: 25px;
+}
+.portfolio-item .portfolio-image > img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+</style>
+<!-- style for items in portfolio-->
+<style>
+
+  .portfolio-filters {
+    text-align: center;
+    margin: 4rem 0 3rem;
+  }
+
+  .portfolio-item {
+    float: left;
+    width: 25%;
+    position: relative;
+  }
+    .portfolio-image {
+      overflow: hidden;
+      display: block;
+      position: relative;
+    }
+    /* info section*/
+    .portfolio-item > a .project-overlay {
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(10, 10, 10, 0.9);
+      color: #fff;
+      text-align: center;
+      opacity: 0;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+    }
+    .portfolio-item > a .project-overlay .project-info {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      margin-top: 0px;
+      opacity: 0;
+      -webkit-transition: all 0.3s ease 0.3s;
+      transition: all 0.3s ease 0.3s;
+    }
+    .portfolio-item > a .project-overlay .project-info i.fa {
+      margin-bottom: 1rem;
+      background-color: #fff;
+      font-size: 22px;
+      line-height: 48px;
+      width: 48px;
+      height: 48px;
+      color: #000;
+      border-radius: 32px;
+    }
+    .portfolio-item > a .project-overlay .project-info .project-name {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      margin: 0 0 .5rem;
+    }
+    .portfolio-item > a .project-overlay .project-info p {
+      color: #999;
+      margin: 0 1rem 1rem;
+    }
+    .portfolio-item > a:hover .project-overlay {
+      opacity: 1;
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+    }
+    .portfolio-item > a:hover .project-overlay .project-info {
+      margin-top: -60px;
+      opacity: 1;
+    }
+</style>
+<!-- end of style for items in portfolio-->
+
+<!--style for Portfolio section category list-->
+<style>
+  #projectbuttons {
       color: #111;
       text-decoration: none;
       text-transform: uppercase;
       display: inline-block;
-      background-color: #e7e7e7;
+      background-color: #e6e6e6;
       padding: 1rem 2rem;
-
-      border-radius: 4px;
+      font-family: cursive;
+      border-radius: 6px;
 
       transition: all 0.3s ease;
     }
@@ -552,12 +672,9 @@ $(function() {
         color: #fff;
       }
 
-
-
-
 </style>
 
-<!--End of style for Portfolio-->
+<!--End of style for Portfolio section category list-->
 
 
 
