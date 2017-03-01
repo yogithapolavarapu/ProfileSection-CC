@@ -509,19 +509,19 @@ $(function() {
 <div class="projects" id="portfolio">
 
   <!--categories-->
-  <div id="filters" class="filters-in-portfolio col-lg-12 text-center"></br>
+  <div id="filters" class="portfolio-filters col-lg-12 text-center"></br>
     <!--Category list-->
     <ul class="list-inline">
-      <li><a href="#" datafilter=".projects" id="projectbuttons"><h5>Projects</h5> </a></li>
-      <li><a href="#" datafilter=".certificates" id="projectbuttons"><h5>Certificates</h5> </a></li>
-      <li><a href="#" datafilter=".achievements" id="projectbuttons"><h5>Achievements</h5> </a></li>
-      <li><a href="#" datafilter=".badges" id="projectbuttons"><h5>Badges</h5> </a></li>
+      <li><a href="#" data-filter=".projects" id="projectbuttons" class="active"><h5>Projects</h5> </a></li>
+      <li><a href="#" data-filter=".certificates" id="projectbuttons"><h5>Certificates</h5> </a></li>
+      <li><a href="#" data-filter=".achievements" id="projectbuttons"><h5>Achievements</h5> </a></li>
+      <li><a href="#" data-filter=".badges" id="projectbuttons"><h5>Badges</h5> </a></li>
     </ul> </br> </br>
     <!--end of category list-->
   </div>
-
+<div class="Portfolio" id="Portfolio">
 <!--Projects row-->
-<div class="row">
+ <div class="row">
   <!-- sample portfolio item1-->
   <div class="col-md-4 portfolio-item projects">
     <div class="portfolio-image">
@@ -588,16 +588,13 @@ $(function() {
       </div>
       <!-- /end of sample portfolio item4-->
 
-
-
+  </div>
 </div>
 
 
-
-<hr>
-
-<!-- Pagination -->
-<div class="row text-center">
+  <hr>
+  <!-- Pagination -->
+  <div class="row text-center">
     <div class="col-lg-12">
         <ul class="pagination">
             <li>
@@ -614,28 +611,30 @@ $(function() {
             </li>
         </ul>
     </div>
-</div>
-
-
-
-
-
-
+  </div>
+  <!--end of pagination-->
 </div>
 <!--End of Portfolio section-->
+<script src='http://isotope.metafizzy.co/isotope.pkgd.min.js'></script>
+
+<script>
+  $(function(){
+
+  });
+</script>
 
 <style>
-.pagination{
+  .pagination{
   color: #e5e5e5;
-}
-.portfolio-item {
+  }
+  .portfolio-item {
     margin-bottom: 25px;
-}
-.portfolio-item .portfolio-image > img {
+  }
+  .portfolio-item .portfolio-image > img {
   width: 100%;
   height: auto;
   display: block;
-}
+  }
 </style>
 <!-- style for items in portfolio-->
 <style>
@@ -727,11 +726,9 @@ $(function() {
       h5 {
         font-size: 1.5rem;
         line-height: 2.5rem;
-        font-weight: 500;
+        font-weight: 600;
         margin:0;
       }
-
-
       #projectbuttons:active {
         background-color: #111;
         color: #fff;
