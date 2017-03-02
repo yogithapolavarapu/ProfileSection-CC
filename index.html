@@ -512,14 +512,14 @@ $(function() {
   <div id="filters" class="portfolio-filters col-lg-12 text-center"></br>
     <!--Category list-->
     <ul class="list-inline">
-      <li><a href="#" data-filter=".projects" id="projectbuttons" class="active"><h5>Projects</h5> </a></li>
-      <li><a href="#" data-filter=".certificates" id="projectbuttons"><h5>Certificates</h5> </a></li>
-      <li><a href="#" data-filter=".achievements" id="projectbuttons"><h5>Achievements</h5> </a></li>
-      <li><a href="#" data-filter=".badges" id="projectbuttons"><h5>Badges</h5> </a></li>
-    </ul> </br> </br>
+      <li><a href="#Portfolioprojects" id="projectbuttons" class="active"><h5>Projects</h5> </a></li>
+      <li><a href="#certificates"id="projectbuttons"><h5>Certificates</h5> </a></li>
+      <li><a href="#achievements"id="projectbuttons"><h5>Achievements</h5> </a></li>
+      <li><a href="#badges" id="projectbuttons"><h5>Badges</h5> </a></li>
+    </ul> </br>
     <!--end of category list-->
   </div>
-<div class="Portfolio" id="Portfolio">
+<div class="Portfolio" id="Portfolioprojects">
 <!--Projects row-->
  <div class="row">
   <!-- sample portfolio item1-->
@@ -601,14 +601,49 @@ $(function() {
   <!--end of pagination-->
 </div>
 <!--End of Portfolio section-->
+
+
+
 <script src='http://isotope.metafizzy.co/isotope.pkgd.min.js'></script>
 
+
+
+<!--Script for Filters in portfolio-->
 <script>
-  $(function(){
+  $(document).ready(function(){
+    $("Portfolioprojects").click(
+    var area = $(this).attr("href");
+		$(".certificates").hide();
+		$(".achievements").hide();
+		$(".badges").hide();
+		$(area).show("slow");
+    )
+      $("#certificates").click(
+      var area = $(this).attr("href");
+  		$(".Portfolioprojects").hide();
+  		$(".achievements").hide();
+  		$(".badges").hide();
+  		$(area).show("slow");
+      )
+        $("#achievements").click(
+        var area = $(this).attr("href");
+    		$(".certificates").hide();
+    		$(".Portfolioprojects").hide();
+    		$(".badges").hide();
+    		$(area).show("slow");
+        )
+          $("#badges").click(
+          var area = $(this).attr("href");
+      		$(".certificates").hide();
+      		$(".achievements").hide();
+      		$(".Portfolioprojects").hide();
+      		$(area).show("slow");
+          )
 
   });
-</script>
 
+</script>
+<!--End of script for filters in portfolio-->
 <style>
   .icon{
     width:250px;
@@ -619,11 +654,11 @@ $(function() {
   #directionicons {
   display: inline-block;
   margin: 0 auto;
-}
-#directionicons:hover {
+  }
+  #directionicons:hover {
   color: #1b95e0;
   cursor: pointer;
-}
+  }
 
   .portfolio-item {
     margin-bottom: 25px;
